@@ -46,7 +46,7 @@ public class LoginStepsDef {
         driver.quit();
     }
 
-    @Dado("que me encuentro en la página de login de juntoz")
+    @Dado("que me encuentro en la página de login de Saucedemo")
     public void que_me_encuentro_en_la_página_de_login_de_sacedemo() {
         driver.get("https://juntoz.com/account/login");
         screenShot();
@@ -87,9 +87,47 @@ public class LoginStepsDef {
         this.scenario.attach(evidencia, "image/png", "evidencias");
     }
 
-    @Y("doy click en Envios Gratis")
-    public void doyClickEnEnviosGratis() {
+    @Y("selecciono la opcion envio gratis")
+    public void seleccionoLaOpcionEnvioGratis() {
         LoginSteps loginSteps = new LoginSteps(driver);
-        loginSteps.ClickGratis();
+        loginSteps.send();
+    }
+
+    @Y("selecciono la opcion no gracias")
+    public void seleccionoLaOpcionNoGracias() {
+        LoginSteps loginSteps = new LoginSteps(driver);
+        loginSteps.not();
+    }
+
+    @Y("descarto el cuadro de dialogo")
+    public void descartoElCuadroDeDialogo() {
+        LoginSteps loginSteps = new LoginSteps(driver);
+        loginSteps.dialog();
+    }
+
+    @Y("presiono la tecla Escape")
+    public void presionoLaTeclaEscape() {
+        LoginSteps loginSteps = new LoginSteps(driver);
+        loginSteps.presionoLaTeclaEscape();
+    }
+
+    @Y("digito la palabra {string} en el buscador")
+    public void digitoLaPalabraEnElBuscador(String send) {
+        System.out.println("envio gratis");
+        LoginSteps loginSteps = new LoginSteps(driver);
+        loginSteps.buscarProducto(send);
+        screenShot();
+    }
+
+    @Y("doy clic en el boton buscar")
+    public void doyClicEnElBotonBuscar() {
+        LoginSteps loginSteps = new LoginSteps(driver);
+        loginSteps.clickBuscar();
+    }
+
+    @Y("doy clic en el boton agregar al carrito")
+    public void doyClicEnElBotonAgregarAlCarrito() {
+        LoginSteps loginSteps = new LoginSteps(driver);
+        loginSteps.carrito();
     }
 }

@@ -4,6 +4,7 @@ import com.nttdata.page.LoginPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -34,6 +35,7 @@ public class LoginSteps {
 
     }
 
+
     /**
      * Escribir el password
      *
@@ -50,6 +52,22 @@ public class LoginSteps {
         this.driver.findElement(LoginPage.loginButton).click();
     }
 
+    public void send() {
+        this.driver.findElement(LoginPage.sendFree).click();
+    }
+
+    public void not() {
+        this.driver.findElement(LoginPage.not).click();
+    }
+
+    public void carrito() {
+        this.driver.findElement(LoginPage.not).click();
+    }
+
+    public void dialog() {
+        this.driver.findElement(LoginPage.dialog).click();
+    }
+
     public int getItemSize() {
         List<WebElement> items = this.driver.findElements(LoginPage.itemsCards);
         return items.size();
@@ -59,7 +77,20 @@ public class LoginSteps {
         return this.driver.findElement(LoginPage.productsTitle).getText();
     }
 
-    public void ClickGratis() {
-        this.driver.findElement(LoginPage.ClickEnviosGratis).click();
+    public void presionoLaTeclaEscape() {
+        // Utilizando la clase Actions para simular la pulsación de la tecla Escape.
+        Actions actions = new Actions(driver);
+        actions.sendKeys("\uE00C").perform();
+    }
+
+    public void clickBuscar() {
+        WebElement botonBuscar = driver.findElement(LoginPage.btnbuscar);
+        botonBuscar.click();
+    }
+
+    public void buscarProducto(String send) {
+        WebElement busqueda = driver.findElement(LoginPage.sendFree);
+        busqueda.sendKeys(send);
+
     }
 }

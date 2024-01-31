@@ -7,6 +7,10 @@ Característica: Login
 
   @test
   Escenario: Iniciar sesión
-    Dado que me encuentro en la página de login de juntoz
+    Dado que me encuentro en la página de login de Saucedemo
     Cuando inicio sesión con las credenciales usuario: "sergiotd29@gmail.com" y contraseña: "Tantoasi1612"
-    Entonces valido que debería aparecer el título de "Sergio"
+    Y selecciono la opcion no gracias
+    Y presiono la tecla Escape
+    Y digito la palabra "envio gratis" en el buscador
+    Y doy clic en el boton buscar
+    Y doy clic en el boton agregar al carrito
