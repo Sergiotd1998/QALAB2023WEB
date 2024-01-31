@@ -130,4 +130,10 @@ public class LoginStepsDef {
         LoginSteps loginSteps = new LoginSteps(driver);
         loginSteps.carrito();
     }
+
+    @Y("desplazo el scroll hacia abajo")
+    public void desplazoElScrollHaciaAbajo() {
+        LoginSteps loginSteps = new LoginSteps(driver);
+        loginSteps.desplazarScrollHaciaAbajo();
+    }
 }

@@ -13,4 +13,5 @@ Característica: Login
     Y presiono la tecla Escape
     Y digito la palabra "envio gratis" en el buscador
     Y doy clic en el boton buscar
+    Y desplazo el scroll hacia abajo
     Y doy clic en el boton agregar al carrito

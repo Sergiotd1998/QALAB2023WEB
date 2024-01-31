@@ -21,6 +21,6 @@ public class LoginPage {
     public static By productsTitle = By.cssSelector("span.title");
     public static By itemsCards = By.cssSelector("div.inventory_item");
 
-    public static By carrito = By.xpath("//body/section[@id='main-container']/div[@id='catalog']/div[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[16]/div[3]/div[1]/button[1]");
+    public static By carrito = By.xpath("//*[@id=\"product-preview-card\"]/div/div[16]/div[3]/div");
 
 }

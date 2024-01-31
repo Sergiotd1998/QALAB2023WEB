@@ -2,6 +2,7 @@ package com.nttdata.steps;
 
 import com.nttdata.page.LoginPage;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -61,7 +62,7 @@ public class LoginSteps {
     }
 
     public void carrito() {
-        this.driver.findElement(LoginPage.not).click();
+        this.driver.findElement(LoginPage.carrito).click();
     }
 
     public void dialog() {
@@ -92,5 +93,12 @@ public class LoginSteps {
         WebElement busqueda = driver.findElement(LoginPage.sendFree);
         busqueda.sendKeys(send);
 
+    }
+
+    public void desplazarScrollHaciaAbajo() {
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+
+        // Desplazar el scroll hacia abajo 500 píxeles (ajusta según tus necesidades)
+        jsExecutor.executeScript("window.scrollBy(0, 500);");
     }
 }
